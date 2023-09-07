@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Question } from './models/question.model';
 import { WORD_LIST1 } from './word-lists/word_list1';
 import { WORD_LIST2 } from './word-lists/word_list2';
+import { WORD_LIST_SUBJUNCTIVE_MIX1 } from './word-lists/word_list_subjunctive1';
+import { WORD_LIST_SUBJUNCTIVE_MIX2 } from './word-lists/word_list_subjunctive2';
 import { DialogComponent } from './dialog/dialog.component';
 import { ImportQuestionsComponent } from './import-questions/import-questions.component';
 
@@ -42,6 +44,12 @@ export class AppComponent {
         break;
       case 2:
         this.loadedQuestions = [...WORD_LIST2];
+        break;
+      case 3:
+        this.loadedQuestions = [...WORD_LIST_SUBJUNCTIVE_MIX1];
+        break;
+      case 4:
+        this.loadedQuestions = [...WORD_LIST_SUBJUNCTIVE_MIX2];
         break;
       default:
         alert("importWordList(): wordList not recognized");
