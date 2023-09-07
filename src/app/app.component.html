@@ -1,9 +1,16 @@
 
 <div>
-  <button class="word-list-button" (click)="importWordList(1)">Import word list 1</button>
-  <button class="word-list-button" (click)="importWordList(2)">Import word list 2</button>
-  <button class="word-list-button" (click)="importWordList(3)">Import mostly-subjunctive 1</button>
-  <button class="word-list-button" (click)="importWordList(4)">Import mostly-subjunctive 2</button>
+  
+  <div class="dropdown">
+    <button class="dropdown-button">Import Word List</button>
+    <div class="dropdown-content">
+      <a *ngFor="let wordList of wordLists; let i = index" (click)="importWordList(i)">
+        {{ wordList.label }}
+      </a>
+    </div>
+  </div>
+  
+
   <button class="dialog-button" (click)="openInstructionsDialog()">Generate questions</button>
   <button class="dialog-button" (click)="openImportDialog()">Import questions</button>
 </div>

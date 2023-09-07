@@ -7,6 +7,8 @@ import { WORD_LIST_SUBJUNCTIVE_MIX1 } from './word-lists/word_list_subjunctive1'
 import { WORD_LIST_SUBJUNCTIVE_MIX2 } from './word-lists/word_list_subjunctive2';
 import { DialogComponent } from './dialog/dialog.component';
 import { ImportQuestionsComponent } from './import-questions/import-questions.component';
+import { WORD_LIST_ADVANCED1 } from './word-lists/word_list_advanced1';
+import { WORD_LIST_ADVANCED2 } from './word-lists/word_list_advanced2';
 
 @Component({
   selector: 'app-root',
@@ -37,23 +39,34 @@ export class AppComponent {
 
   loadedQuestions: Question[] = [];
 
-  importWordList(wordList: number) {
-    switch (wordList) {
-      case 1:
-        this.loadedQuestions = [...WORD_LIST1];
-        break;
-      case 2:
-        this.loadedQuestions = [...WORD_LIST2];
-        break;
-      case 3:
-        this.loadedQuestions = [...WORD_LIST_SUBJUNCTIVE_MIX1];
-        break;
-      case 4:
-        this.loadedQuestions = [...WORD_LIST_SUBJUNCTIVE_MIX2];
-        break;
-      default:
-        alert("importWordList(): wordList not recognized");
-        break;
+  wordLists = [
+    {
+      label: 'Basic 1',
+      words: WORD_LIST1
+    },
+    {
+      label: 'Basic 2',
+      words: WORD_LIST2
+    },
+    {
+      label: '(Mostly) subjunctives 1',
+      words: WORD_LIST_SUBJUNCTIVE_MIX1
+    },
+    {
+      label: '(Mostly) subjunctives 2',
+      words: WORD_LIST_SUBJUNCTIVE_MIX2
+    },
+    {
+      label: 'Advanced 1',
+      words: WORD_LIST_ADVANCED1
+    },
+    {
+      label: 'Advanced 2',
+      words: WORD_LIST_ADVANCED2
     }
+  ];
+
+  importWordList(index: number) {
+    this.loadedQuestions = [...this.wordLists[index].words];
   }
 }
