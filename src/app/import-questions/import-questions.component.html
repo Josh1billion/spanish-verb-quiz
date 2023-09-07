@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Import questions</h2>
+<div mat-dialog-content>
+    <strong>Paste a JSON array to import questions:</strong><br><br>
+    <textarea [(ngModel)]="questionJSON"></textarea>
+    
+</div>
+<div mat-dialog-actions>
+    <button (click)="import()">Import</button>
+</div>
+
+<button mat-icon-button mat-dialog-close aria-label="Close">
+    Close
+</button>
