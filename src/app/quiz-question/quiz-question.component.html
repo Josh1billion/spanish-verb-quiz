@@ -1,0 +1,8 @@
+<div *ngIf="question" class="question-container">
+    <span class="question-text">{{ question.sentencePartOne }}</span>
+    <input>
+    <button *ngIf="!answerIsShown" (click)="showAnswer()">Show</button>
+    <span *ngIf="answerIsShown">{{question.answer}}</span>
+    <i>({{ question.infinitive }})</i>
+    <span class="question-text">{{ question.sentencePartTwo}}</span>
+</div>

@@ -1,0 +1,58 @@
+/* Style the question container */
+.question-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+/* Style the question text */
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Style the input field */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the Show button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the answer text */
+span[ngIf="answerIsShown"] {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Style the infinitive text */
+i {
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Style the sentence part two text */
+.question-text:nth-child(6) {
+    margin-top: 10px;
+}
