@@ -7,6 +7,9 @@
       <a *ngFor="let wordList of wordLists; let i = index" (click)="importWordList(i)">
         {{ wordList.label }}
       </a>
+      <a (click)="importWordList(-1)">
+        Random questions
+      </a>
     </div>
   </div>
   

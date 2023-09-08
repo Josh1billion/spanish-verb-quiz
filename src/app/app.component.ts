@@ -67,6 +67,24 @@ export class AppComponent {
   ];
 
   importWordList(index: number) {
+    if (index === -1) {
+      // special mix of questions
+      this.loadedQuestions = [];
+      this.wordLists.forEach((wordList) => {
+        this.loadedQuestions.push(...wordList.words);
+      });
+
+      this.shuffleArray(this.loadedQuestions);
+
+      this.loadedQuestions = this.loadedQuestions.splice(0, 20);
+    }
     this.loadedQuestions = [...this.wordLists[index].words];
+  }
+
+  shuffleArray(array: any[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
   }
 }

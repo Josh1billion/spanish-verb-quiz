@@ -8,7 +8,7 @@ export const WORD_LIST_SUBJUNCTIVE_MIX2 =
       "sentencePartTwo": "en una fábrica."
     },
     {
-      "answer": "hable",
+      "answer": "hables",
       "infinitive": "hablar",
       "sentencePartOne": "Es importante que tú",
       "sentencePartTwo": "con sinceridad."
@@ -28,8 +28,8 @@ export const WORD_LIST_SUBJUNCTIVE_MIX2 =
     {
       "answer": "corrieron",
       "infinitive": "correr",
-      "sentencePartOne": "Ellos",
-      "sentencePartTwo": "una maratón."
+      "sentencePartOne": "Ayer, ellos",
+      "sentencePartTwo": "un maratón."
     },
     {
       "answer": "irás",
